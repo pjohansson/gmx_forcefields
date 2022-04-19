@@ -1,0 +1,15 @@
+[ moleculetype ]
+; Name            nrexcl
+lj-fluid               3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+     1        LJ1      1     LJ1   AT1      1;       0.00        1.0
+
+[ moleculetype ]
+; Name            nrexcl
+lj-fluid-B               3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+     1        LJ2      1     LJ2   AT2      1;       0.00        1.0

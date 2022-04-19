@@ -1,0 +1,25 @@
+[ moleculetype ]
+; Name            nrexcl
+lj-chain-2               3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+     1        LJ1      1     LJ1   AT1      1;       0.00        1.0
+     2        LJ1      1     LJ1   AT1      1;       0.00        1.0
+
+[ bonds ]
+; i	   j	funct	length
+  1    2        1
+
+[ moleculetype ]
+; Name            nrexcl
+lj-chain-2-B               3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+     1        LJ2      1     LJ2   AT2      1;       0.00        1.0
+     2        LJ2      1     LJ2   AT2      1;       0.00        1.0
+
+[ bonds ]
+; i	   j	funct	length
+  1    2        1

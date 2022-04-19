@@ -1,0 +1,44 @@
+; Surfactant with specific atoms as head and tail
+[ moleculetype ]
+; Name            nrexcl
+lj-surfactant               3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr
+     1        SU1      1     SUR   SU1      1
+     2        SU2      1     SUR   SU2      1
+
+[ constraints ]
+; i	   j	funct	length
+  1    2        1      1.0
+
+
+; Surfactant with regular LJ fluid atoms as head and tail
+[ moleculetype ]
+; Name            nrexcl
+lj-surfactant-bond               3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr
+     1        SU1      1     SUR   SU1      1
+     2        SU2      1     SUR   SU2      1
+
+[ bonds ]
+; i	   j	funct	length
+  1    2        1
+
+
+; Surfactant with head and tail which are more attractive and repulsive
+; to the LJ fluids than to themselves
+[ moleculetype ]
+; Name            nrexcl
+lj-surfactant-alt               3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr
+     1        SU3      1     SUR   SU1      1
+     2        SU4      1     SUR   SU2      1
+
+[ constraints ]
+; i	   j	funct	length
+  1    2        1      1.0

@@ -1,0 +1,8 @@
+[ defaults ]
+; nbfunc	comb-rule
+       1            3
+
+#include "atomtypes.itp"
+#include "ffnonbonded.itp"
+#include "ffbonded.itp"
+#include "simple-fluids.itp"

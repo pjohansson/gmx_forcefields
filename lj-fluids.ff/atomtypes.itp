@@ -1,0 +1,39 @@
+[ atomtypes ]
+
+;------;
+; Base ;
+;------;
+
+; Lennard-Jones fluid base atom species
+; name             mass    charge   ptype           sigma         epsilon
+ LJ1  Ar  18        1.0     0.000       A             1.0             1.0
+ LJ2  Ar  18        1.0     0.000       A             1.0             1.0
+
+
+;-------------;
+; Surfactants ;
+;-------------;
+
+; SU1 and SU2 are exact replicas of LJ1 and LJ2 but with separate naming
+; name             mass    charge   ptype           sigma         epsilon
+ SU1 SU1  18        1.0     0.000       A             1.0             1.0
+ SU2 SU2  18        1.0     0.000       A             1.0             1.0
+
+; SU3 and SU4 have no internal dispersion attraction but are attracted
+; to LJ1 and LJ2 respectively
+; name             mass    charge   ptype           sigma         epsilon
+ SU3  Ar  18        1.0     0.000       A             1.0             1.0
+ SU4  Ar  18        1.0     0.000       A             1.0             1.0
+
+
+;------;
+; Misc ;
+;------;
+
+; Lennard-Jones homogenous substrate
+; name             mass    charge   ptype           sigma         epsilon
+ CUB   C  12        1.0     0.000       A            1.00            1.0
+
+; Periodic wall atom type, repulsive to all other atoms
+; name             mass    charge   ptype           sigma         epsilon
+ REP   C  12        1.0     0.000       V           -1.00            1.0
