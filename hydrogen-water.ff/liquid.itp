@@ -1,0 +1,8 @@
+[ moleculetype ]
+; Name            nrexcl
+water-bulk             3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+     1        H2O      1     H2O   H2O      1;       0.00        1.0
+

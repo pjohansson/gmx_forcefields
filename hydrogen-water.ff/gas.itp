@@ -1,0 +1,7 @@
+[ moleculetype ]
+; Name            nrexcl
+hydrogen-gas           3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+     1         H2      1      H2    H2      1;       0.00        1.0

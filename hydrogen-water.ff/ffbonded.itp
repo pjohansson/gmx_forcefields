@@ -1,0 +1,4 @@
+[ bondtypes ]
+; i    j  func       b0          kb
+; Ar   Ar     1      1.0         1E3
+; SU1  SU2     1      1.0         1E3

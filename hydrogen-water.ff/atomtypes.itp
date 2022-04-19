@@ -1,0 +1,23 @@
+[ atomtypes ]
+
+;------;
+; Base ;
+;------;
+
+; name   mass(u)  charge(e)   ptype     sigma(nm)           eps(kJ/mol)
+; Hydrogen gas phase
+    H2 H2  1   2.0159      0.000       A        0.2968            0.27687285
+; Water liquid phase
+   H2O H2O 2   18.015      0.000       A     0.293937642681228   3.79310135032382
+
+;------;
+; Misc ;
+;------;
+
+; Lennard-Jones homogenous substrate
+; name             mass    charge   ptype           sigma         epsilon
+ CUB   C  12       12.0     0.000       A          0.3160           0.762
+
+; Periodic wall atom type, repulsive to all other atoms
+; name             mass    charge   ptype           sigma         epsilon
+ REP   C  12        1.0     0.000       V           -1.00            1.0

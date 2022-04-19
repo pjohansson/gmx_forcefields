@@ -1,0 +1,20 @@
+; Force field which mimics a two-phase system of hydrogen gas 
+; in bulk water.
+;
+; Parameters acquired from Guillame Galliero (UPPA, Pau, 2022) and:
+; 
+; Benazzouz, Ho, Nguyen, Hoang and Galliero, 
+; Journal of Natural Gas Science and Engineering 98, 
+; 104383, 2022.
+;
+; Ported to Gromacs by Petter Johansson, 2022.
+
+[ defaults ]
+; nbfunc	comb-rule
+       1            2 ; Lorentz-Berthelot
+
+#include "atomtypes.itp"
+#include "ffnonbonded.itp"
+#include "ffbonded.itp"
+#include "gas.itp"
+#include "liquid.itp"
