@@ -1,3 +1,20 @@
+; Simple Lennard-Jones substrate.
+;
+; Designed for reduced simulation units and a FCC lattice.
+;
+; To add position restraints for keeping the substrate in formation,
+; define `Substrate_PosRes` in your topology before including
+; this file. The restraining force can be similarly controlled by 
+; defining `Substrate_PosResForce` (default: 10).
+;
+; Example (in .top topology file):
+; #define Substrate_PosRes
+; #define Substrate_PosResForce 4.5e-2
+; #include lj-fluids.ff/substrates.itp
+;
+; Example (in .mdp parameter file):
+; define = -DSubstrate_PosRes -DSubstrate_PosResForce=4.5e-2
+
 [ moleculetype ]
 ; Name            nrexcl
 lj-substrate           3
@@ -7,19 +24,12 @@ lj-substrate           3
      1        CUB      1     CUB   CUB      1;       0.00        1.0
 
 #ifdef Substrate_PosRes
-[ position_restraints ]
-; iatom type    fx  fy  fz
-      1    1   1e1 1e1 1e1
+
+#ifndef Substrate_PosResForce
+#define Substrate_PosResForce 1e1
 #endif
 
-[ moleculetype ]
-; Name            nrexcl
-lj-substrate-posres    3
-
-[ atoms ]
-;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
-     1        CUB      1     CUB   CUB      1;       0.00        1.0
-
 [ position_restraints ]
-; iatom type    fx  fy  fz
-      1    1   1e1 1e1 1e1
+; iatom type                      fx                    fy                    fz
+      1    1   Substrate_PosResForce Substrate_PosResForce Substrate_PosResForce
+#endif
