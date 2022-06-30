@@ -4,9 +4,9 @@
 ; Base ;
 ;------;
 
-; name   mass(u)  charge(e)   ptype     sigma(nm)           eps(kJ/mol)
+; name        mass(u)  charge(e)   ptype     sigma(nm)           eps(kJ/mol)
 ; Hydrogen gas phase
-    H2 H2  1   2.0159      0.000       A        0.2968            0.27687285
+    H2  H2 1   2.0159      0.000       A        0.2968            0.27687285
 ; Water liquid phase
    H2O H2O 2   18.015      0.000       A     0.293937642681228   3.79310135032382
 

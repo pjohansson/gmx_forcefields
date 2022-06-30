@@ -1,2 +1,20 @@
+; TEMPORARY FIX: 
+; Deprecated use of `HydrogenWater_Repulsion` should still work,
+; so check if it is used and if so, define the new `HydrogenWater_Immiscible`
+; variable.
+#ifdef HydrogenWater_Repulsion
+#define HydrogenWater_Immiscible
+#endif
+
+
 [ nonbond_params ]
 ; i     j       func           sigma          epsilon
+
+#ifdef HydrogenWater_Immiscible
+  H2  H2O          1           -0.29             5e-1
+#endif
+
+#ifdef HydrogenSubstrate_Repulsion
+ H2O  CUB          1            0.4             3.79310135032382
+  H2  CUB          1           -0.7             5e1
+#endif
