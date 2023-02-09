@@ -1,0 +1,23 @@
+[ atomtypes ]
+
+;------;
+; Base ;
+;------;
+
+; name   mass(u)  charge(e)   ptype     sigma(nm)           eps(kJ/mol)
+; Supercritical CO2 (323.15 K - 343.15 K)
+   CO2 CO2  1    44.01      0.000       A     0.359917311391904    1.930680193
+; Water liquid phase (323.15 K - 343.15 K)
+   H2O H2O  2   18.015      0.000       A     0.2930796055         3.774693643
+
+;------;
+; Misc ;
+;------;
+
+; Lennard-Jones homogenous substrate
+; name             mass    charge   ptype           sigma         epsilon
+ CUB   C  12       12.0     0.000       A          0.3160           0.762
+
+; Periodic wall atom type, repulsive to all other atoms
+; name             mass    charge   ptype           sigma         epsilon
+ REP   C  12        1.0     0.000       V           -1.00            1.0

@@ -1,0 +1,18 @@
+#ifndef CO2Water_Repulsion_Eps
+#define CO2Water_Repulsion_Eps 1.0
+#endif
+
+#ifndef CO2Substrate_Repulsion_Eps
+#define CO2Substrate_Repulsion_Eps 0.5
+#endif
+
+[ nonbond_params ]
+; i     j       func           sigma          epsilon
+
+#ifdef CO2Water_Repulsion
+ CO2  H2O          1            0.29             CO2Water_Repulsion_Eps
+#endif
+
+#ifdef CO2Substrate_Repulsion
+ CO2  CUB          1            0.35             CO2Substrate_Repulsion_Eps
+#endif

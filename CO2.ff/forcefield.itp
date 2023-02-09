@@ -1,0 +1,16 @@
+; Force field which mimics a two-phase system of supercritical CO2
+; in bulk water. 
+;
+; Parametrized for T = 323.15 K - 343.15 K, at P = 15 MPa
+;
+; Petter Johansson, 2022
+
+[ defaults ]
+; nbfunc	comb-rule
+       1            2 ; Lorentz-Berthelot
+
+#include "atomtypes.itp"
+#include "ffnonbonded.itp"
+#include "ffbonded.itp"
+#include "gas.itp"
+#include "liquid.itp"

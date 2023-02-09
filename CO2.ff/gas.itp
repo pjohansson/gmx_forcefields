@@ -1,0 +1,7 @@
+[ moleculetype ]
+; Name            nrexcl
+co2-supercritical           3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+     1        CO2      1     CO2   CO2      1;       0.00        1.0

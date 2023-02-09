@@ -1,0 +1,15 @@
+; A simple Lennard-Jones substrate, lattice spacing = 0.4469 nm 
+
+[ moleculetype ]
+; Name            nrexcl
+lj-substrate           3
+
+[ atoms ]
+;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
+     1        CUB      1     CUB   CUB      1;       0.00        1.0
+
+#ifdef Substrate_PosRes
+[ position_restraints ]
+; iatom type    fx  fy  fz
+      1    1   5e3 5e3 5e3
+#endif
